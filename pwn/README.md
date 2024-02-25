@@ -2,10 +2,12 @@
 
 ## TALKING-WEB
 
-***Level-1*** **Send an HTTP request using curl**          
+##### Level-1         
+**Send an HTTP request using curl**          
 ![Level-1_jpg](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/d3caddd0-c32c-4fb3-aa21-f759d231c9b4)                    
-In the above level i have used  curl command to make a http request to the given Server.**curl** is command line tool which is used to make connections between server and clients following a specific protocol                 
-***Level-2*** **Send an HTTP request using nc**                 
+In the above level i have used  curl command to make a http request to the given Server.**curl** is command line tool which is used to make connections between server and clients following a specific protocol       
+##### Level-2            
+**Send an HTTP request using nc**                 
 ![Level-2_jpg](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/f2fb3a41-fc58-4c71-a18d-3d23491bacc2)                  
 **NetCat(nc)** is a command line tool which is used to make ***TCP(Transmission Control Protocol)*** and ***UDP(User DataGram Protocol)*** with the server. Once after making the connection with the server i have sent a get request to the server then the server responded to the request and i got the flag.                 
 ***Level-3*** **Send an HTTP request using python**                       
