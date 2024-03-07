@@ -32,39 +32,44 @@
 ![challenge1](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/689a39ae-1707-494b-8117-afb418a423f1)                       
 ![sol](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/e304fae9-eb7d-49b7-a0b2-0f04907aaccf)                                 
 ![ans](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/ed3e3816-aced-48ab-ae98-0d698014f3e8)                   
-
+----
 **Here i have written a python script using base64 module. using that i converted hex to bytes and then encoded it in base64.**                              
   > ***challenge-2***                                 
 ![Screenshot 2024-03-07 125010](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/288c8904-4362-401c-85e6-9e8f9872c91a)
 ![Screenshot 2024-03-07 125136](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/b4b4a963-0f29-4284-96df-d141e802700b)
 ![Screenshot 2024-03-07 125127](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/22670d1f-4fa4-4dea-9cac-7661cc2a6e4d)
-**Here I have written a python scripts which converts the two string into byte and finds the xor of the two byte strings. the output is stord in a byte array.**    
+**Here I have written a python scripts which converts the two string into byte and finds the xor of the two byte strings. the output is stord in a byte array.**    ----
 > ***challenge-3***                              
 ![Screenshot 2024-03-07 125736](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/058719c8-512e-4a1c-b047-2d33c34ab895)                                 
 ![Screenshot 2024-03-07 125815](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/e24e0e3f-7322-4236-8957-2bc5002f5c6d)               
 ![Screenshot 2024-03-07 125845](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/af0beb3c-b046-4b93-ae8a-052f41edc450)                  
-**Here i have written a python script which does the xor of given ciphertext with each ascii character and results output. Our message will mostly have alphabet characters and numbers. So what i have done is i made a list of all alphabets and numbers. using that i sorted the output message.**                      
+**Here i have written a python script which does the xor of given ciphertext with each ascii character and results output. Our message will mostly have alphabet characters and numbers. So what i have done is i made a list of all alphabets and numbers. using that i sorted the output message.**
+> ---- 
 > ***challenge-4***                                                 
 ![Screenshot 2024-03-07 130529](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/2b759ba7-b4e8-43ca-9ead-9836389cde3a)                      
 ![Screenshot 2024-03-07 130622](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/9f6293b9-144c-4142-a451-5712a8bcc6c6)                   
 ![Screenshot 2024-03-07 130637](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/e043b1e7-2c39-40b4-8c1a-1f3481bccd62)                    
-**Here i have applied the same above logic . But the difference is i done this for each line in the file.**                                    
+**Here i have applied the same above logic . But the difference is i done this for each line in the file.**
+> ----                               
 > ***challenge-5***                                                  
 ![Screenshot 2024-03-07 130855](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/e9eaf690-ef28-424d-8191-d487363503ba)                 
 ![Screenshot 2024-03-07 130941](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/87cee4b7-1302-46a2-9cfb-86d96f0e07f2)                             
 ![Screenshot 2024-03-07 131010](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/2417151a-453c-4248-a922-f7ec67d250a3)                  
-**Here i have written a python script using itertools module. i have xored the message with key for each iteration.**                       
+**Here i have written a python script using itertools module. i have xored the message with key for each iteration.**
+> ----                     
 > ***challenge-7***                                     
 ![Screenshot 2024-03-07 131402](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/46f029bd-71e7-453a-8b68-3500bbb4f9c9)                    
 ![Screenshot 2024-03-07 131427](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/40f858b7-98ae-4b25-b279-e4896923bcf6)                                 
 ![Screenshot 2024-03-07 131536](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/34d9d8d1-6a8c-47ff-bf3d-16e50a1ce6c8)                   
-**Here i have written a pythonscript to decrypt AES encryption using ***PyCryptodome*** module.**                               
+**Here i have written a pythonscript to decrypt AES encryption using ***PyCryptodome*** module.**
+> ----          
 > ***challenge-8***                                     
 ![Screenshot 2024-03-07 131857](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/5399dda7-2cdd-4453-9e9b-9b63d62dc7bb)
 ![Screenshot 2024-03-07 132215](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/ed55eb90-1406-450e-88df-61b08049a331)
 ![Screenshot 2024-03-07 132036](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/0b63bb9e-5162-4a31-9158-1c77c82eca8c)
 **Here i have used the logic of AES encryption in ECB mode. The ECB mode will give same ciphertext for same message, which means the data encrypted in ECB mode can easily be hacked.There is only one ciphertext which has same msg repeated.The observation is below**
 ![Screenshot 2024-03-07 132022](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/58b7659d-25e5-4a88-8dfe-c132dec00917)
+> ----
 
 
 
