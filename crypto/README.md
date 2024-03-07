@@ -66,7 +66,7 @@
 > ***challenge-8***                                     
 ![Screenshot 2024-03-07 131857](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/5399dda7-2cdd-4453-9e9b-9b63d62dc7bb)
 ![Screenshot 2024-03-07 132215](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/ed55eb90-1406-450e-88df-61b08049a331)
-![Screenshot 2024-03-07 132036](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/0b63bb9e-5162-4a31-9158-1c77c82eca8c)
+![Screenshot 2024-03-07 132036](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/0b63bb9e-5162-4a31-9158-1c77c82eca8c)                          
 **Here i have used the logic of AES encryption in ECB mode. The ECB mode will give same ciphertext for same message, which means the data encrypted in ECB mode can easily be hacked.There is only one ciphertext which has same msg repeated.The observation is below**
 ![Screenshot 2024-03-07 132022](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/58b7659d-25e5-4a88-8dfe-c132dec00917)
 > ----
