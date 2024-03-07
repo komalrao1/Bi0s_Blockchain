@@ -18,12 +18,12 @@
 **Sol**
   ![ciphers](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/d3e21d1a-10f3-43d0-985c-88263fca21d0)
   **Here i have used applied the xor property which is a^b=c, where a=msg,b=key and c=ciphertext. we can get the msg by performing xor operation with c and a which is c^b.In the challenge it was given two ciphertexts and key is same. so let message1 be m1 and message2 be m2 and key is k,ciphertexts are c1 and c2.**
-  > (m1^k)^(m2^k)=c1^c2
-  > (m1^m2)^(k^k)=c1^c2
-  > (m1^m2)^(0)=c1^c2
-  > m1^m2=c1^c2
-  > m1=(c1^c2)^m2
-  > m2=(c1^c2)^m1              
+  > (m1^k)^(m2^k)=c1^c2                     
+  > (m1^m2)^(k^k)=c1^c2                             
+  > (m1^m2)^(0)=c1^c2                                
+  > m1^m2=c1^c2                              
+  > m1=(c1^c2)^m2                           
+  > m2=(c1^c2)^m1                                            
 **After several tries i got the key,welcome message and flag. i done the process used in generate.py to generate the ciphertext and both are matching. Here are the ciphertexts**                      
 ![verify](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/917bf5a3-dbd9-469a-8468-82c1087be95e)
 ---
