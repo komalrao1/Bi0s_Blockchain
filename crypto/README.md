@@ -42,7 +42,7 @@
 > ***challenge-3***                              
 ![Screenshot 2024-03-07 125736](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/058719c8-512e-4a1c-b047-2d33c34ab895)                                 
 ![Screenshot 2024-03-07 125815](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/e24e0e3f-7322-4236-8957-2bc5002f5c6d)               
-![Screenshot 2024-03-07 125845](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/af0beb3c-b046-4b93-ae8a-052f41edc450)                  
+![Screenshot 2024-03-07 125845](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/af0beb3c-b046-4b93-ae8a-052f41edc450)                      
 **Here i have written a python script which does the xor of given ciphertext with each ascii character and results output. Our message will mostly have alphabet characters and numbers. So what i have done is i made a list of all alphabets and numbers. using that i sorted the output message.**
 > ---- 
 > ***challenge-4***                                                 
