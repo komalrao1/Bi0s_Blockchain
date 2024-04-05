@@ -17,6 +17,26 @@
 ![bi0s3](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/3424a7f3-7c9b-46c3-8595-3dd1e8b9990c)                                      
 **4th-Challenge**
 ![bi0s44](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/63c11675-6c4d-4cfa-b206-38f556670401)                             
-- In this level the challenge is to convet the bytes into integer. I have done it using python. python has a inbuilt *int.from_byte()* method. this has two parameters bytestring and byteorder.
+- In this level the challenge is to convet the bytes into integer. I have done it using python. python has a inbuilt *int.from_byte()* method. this has two parameters bytestring and byteorder.           
 **Code**                       
-![bi0s4](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/91b40f4d-4936-4dd5-9463-75f60305d4c1)                          
+![bi0s4](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/91b40f4d-4936-4dd5-9463-75f60305d4c1)                               
+**5th-Challenge**
+![bi0s55](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/43a63af6-37be-4c40-8d17-47efa1dd16f0)                      
+- In this level the challenge is to encrypt the given byte string. First i have converted the byte string to integer. Then we can encrypt the message using the formulae of rsa.
+- In RSA the encrypted message **c=(msg\*\*e) mod n**. So i applied the same formulae and finded out the ciphertext.
+**Code**
+![bi0s5](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/96bb9f91-aae3-4643-9c91-2c03306d5e20)
+**6th-Challenge**                             
+![bi0s6](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/25f77e64-8314-4acb-beab-ce08e422806a)
+- In this level the challenge is to decrypt the ciphertext. it can be done using the formulae **plaintext=(ciphertext\*\*d) mod n**. I have calculated this using the python.                        
+**Code**                           
+![bi0s66](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/1f474df1-4dab-44b6-abd2-1741fb38ae5d)                                    
+**7th-Challenge**                              
+![bi0s7](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/7e6849d7-d1b1-42e4-ae91-fedaf7b8e423)                                             
+- In this level the Challenge is to findout the Euler's Totient which is phi. It can be calculated using **(p-1)\*\*(q-1)**. I have calculated it using python.
+**Code**                                       
+![bi0s77](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/9c806803-7ea7-485a-b437-51ce26fd056d)                                       
+**8th-Challenge**               
+![bi0s88](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/9cf71006-4300-480e-be29-fe4ad42330bc)
+- In this level the challenge is to 
+![bi0s8](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/c8af32b6-2bfc-4b88-ac31-4c326fc233a1)
