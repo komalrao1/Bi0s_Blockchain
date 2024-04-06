@@ -2,9 +2,9 @@
 ### Flags                  
 ![rsa_flag](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/5fe2a127-17c0-4310-aac9-5b8d383cce40)                                 
 ***                     
-<br\>
-<br\>
-<br\>
+<br/>
+<br/>
+<br/>
 **1st-Challenge**           
 ![rsa_1](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/01256dfc-adc3-441c-ad7d-021c9957fd98)                       
 - Here the challenge is to compute the power 3 of the given number. I have done it by using python.                  
