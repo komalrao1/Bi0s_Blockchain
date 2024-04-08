@@ -12,9 +12,7 @@
 - **NetCat(nc)** is a command line tool which is used to make ***TCP(Transmission Control Protocol)*** and ***UDP(User DataGram Protocol)*** with the server. Once after making the connection with the server i have sent a get request to the server then the server responded to the request and i got the flag.                 
 ##### Level-3                                                   
 **Send an HTTP request using python**                       
-![Screenshot_2024-04-09_05-03-09](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/4d3a0aa9-a44a-45eb-845a-9e5ac37472af)                         
-                             
-![Level-3_jpg](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/83649ffb-2340-436e-9067-89b7dd3d9999)                                 
+![Screenshot_2024-04-09_05-03-09](https://github.com/komalrao1/Bi0s_Blockchain/assets/147682987/4d3a0aa9-a44a-45eb-845a-9e5ac37472af)                                               
 - In python there is a module named requests using which we can send requests manually to the server. I have sent a get request and server responded and in the response data there is flag      
 ##### Level-4                          
 **Set the host header in an HTTP request using curl**                    
