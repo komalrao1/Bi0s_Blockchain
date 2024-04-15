@@ -1,6 +1,11 @@
 <?php
     session_start();
-    include("database.php")
+    include("database.php");
+?>
+<?php
+    if (empty($_SESSION["username"])){
+        header("Location: index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +37,10 @@
             mysqli_query($conn,$sql);
             echo "<br>Your email has successfully updated";
         }
+        else{
+            echo "<br>Your confirmation email is not same as new email ";
+        }
     }
     session_abort();
 ?>
+
