@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include("database.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,10 +37,15 @@
             echo"please enter a password";
         }
         else{
+            include("database.php");
             $hash=password_hash($password,PASSWORD_DEFAULT);
             $sql="SELECT password FROM userdata
                     WHERE username='$username';";
             $result=mysqli_query($conn,$sql);
+            if (isset($result)) {
+                mysqli_close($conn);
+                $_SESSION["username"]=$username;
+            }
             if(mysqli_num_rows($result) >0){
                 $col=mysqli_fetch_assoc($result);
                 if(password_verify($password,$col["password"])){
@@ -57,6 +61,4 @@
             }
         }
     }
-    $_SESSION["username"]=$username;
-    mysqli_close($conn);
-?>
+?>  
