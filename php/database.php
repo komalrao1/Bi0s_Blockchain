@@ -1,4 +1,10 @@
 <?php
+    if (empty($_SESSION["username"])){
+        header("Location: index.php");
+    }
+?>
+
+<?php
     $db_server="localhost";
     $db_user="root";
     $db_pass="";
@@ -13,4 +19,5 @@
     catch(mysqli_sql_exception){
         echo "Could not connect server<br>";
     }
+?>
     
