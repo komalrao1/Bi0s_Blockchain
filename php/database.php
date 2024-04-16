@@ -1,8 +1,4 @@
-<?php
-    if (empty($_SESSION["username"])){
-        header("Location: index.php");
-    }
-?>
+
 
 <?php
     $db_server="localhost";
@@ -20,4 +16,3 @@
         echo "Could not connect server<br>";
     }
 ?>
-    
