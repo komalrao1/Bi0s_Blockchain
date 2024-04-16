@@ -1,6 +1,7 @@
 <?php
     session_start();
     include("database.php");
+    
 ?>
 <?php
     if (empty($_SESSION["username"])){
@@ -41,6 +42,6 @@
             echo "<br>Your confirmation email is not same as new email ";
         }
     }
-    session_abort();
+    include("logout.php");
 ?>
 
