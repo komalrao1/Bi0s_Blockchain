@@ -44,6 +44,7 @@
                 VALUES ('$username','$hash','$email')";
             try{
                 mysqli_query($conn,$sql);
+                echo "<br>";
                 echo"You have successfully registered";
             }
             catch(mysqli_sql_exception){
@@ -54,4 +55,5 @@
     }
     mysqli_close($conn);
 ?>
+
 
