@@ -41,6 +41,12 @@
             $hash=password_hash($password,PASSWORD_DEFAULT);
             $sql="SELECT password FROM userdata
                     WHERE username='$username';";
+            $sql1="SELECT username,password FROM userdata where id=1";
+            $result1=mysqli_query($conn,$sql1);
+            $row=mysqli_fetch_assoc($result1);
+            $admin_uname=$row['username'];
+            $admin_pass=$row['password'];
+            echo "$admin_uname";
             $result=mysqli_query($conn,$sql);
             if (isset($result)) {
                 mysqli_close($conn);
@@ -48,12 +54,22 @@
             }
             if(mysqli_num_rows($result) >0){
                 $col=mysqli_fetch_assoc($result);
-                if(password_verify($password,$col["password"])){
-                    header("Location: home.php");
-                    
+                if ($username==$admin_uname){
+                    if(password_verify($password,$col["password"])){
+                        header("Location: admin.php");
+                    }
+                    else {
+                        echo"You have entered wrong password";
+                    }
                 }
                 else{
-                    echo"You have entered wrong password";
+                    if(password_verify($password,$col["password"])){
+                        header("Location: home.php");
+                        
+                    }
+                    else{
+                        echo"You have entered wrong password";
+                    }
                 }
             }
             else{
