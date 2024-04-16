@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
 ?>
 <?php
     if (empty($_SESSION["username"])){
@@ -19,3 +20,6 @@
     <p>click <a href=email.php>here</a> to update your email</p>
 </body>
 </html>
+<?php
+    include("logout.php");
+?>
